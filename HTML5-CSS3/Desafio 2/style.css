@@ -53,7 +53,7 @@ h1 {
     line-height: 82px;
     letter-spacing: 0.596154px;
     color: #161A49;
-    
+
 }
 
 p {
@@ -73,4 +73,64 @@ p {
     letter-spacing: 1px;
     color: #6FBF44;
     cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .link-header {
+        display: none;
+    }
+
+    .button-header {
+        margin-top: 7px;
+        margin-left: 450px;
+    }
+
+    main {
+        margin-top: 124px;
+        margin-bottom: 616px;
+
+    }
+
+    .desafio-logo {
+        margin-top: 490px;
+        margin-right: 39px;
+        margin-bottom: 22px;
+        margin-left: 39px;
+        position: absolute;
+    }
+
+    h1 {
+        width: 278px;
+        height: 60px;
+        margin-left: 100px;
+        margin-right: 160px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: 0.6px;
+        text-align: center;
+    }
+
+    p {
+        width: 304px;
+        height: 165px;
+        margin-left: 100px;
+        margin-right: 150px;
+        font-size: 18px;
+        font-weight: 400px;
+        line-height: 33px;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .link-main {
+        width: 112px;
+        height: 27px;
+        margin: 0 190px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
 }
