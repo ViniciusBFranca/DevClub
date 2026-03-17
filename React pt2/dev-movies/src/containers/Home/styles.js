@@ -8,6 +8,9 @@ background-size: cover;
 display: flex;
 align-items: center;
 justify-content: center;
+overflow: hidden;
+
+
 
 &::before {
     content: '';
@@ -15,7 +18,7 @@ justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 105%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 `
@@ -24,7 +27,7 @@ export const Container = styled.div`
    justify-content: space-around;
    align-items: center;
    height: 100%;
-   max-width: 1500px;
+   width: 1500px;
 `
 
 export const Info = styled.div`
@@ -46,7 +49,7 @@ export const Info = styled.div`
     margin-bottom: 20px;
   }
 `
-export const Poster = styled.div `
+export const Poster = styled.div`
    z-index: 2;
    img {
     width: 400px;
