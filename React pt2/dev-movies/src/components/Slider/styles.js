@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   background: #000;
   padding: 0 20px;
- overflow: hidden;
+  overflow: hidden;
 
   .swiper-wrapper {
   display: flex;

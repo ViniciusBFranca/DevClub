@@ -5,6 +5,7 @@ import Button from '../../components/Button'
 import { ContainerButtons } from './styles'
 import Slider from '../../components/Slider'
 import { getImages } from '../../utils/getImages'
+import Modal from '../../components/Modal'
 
 function Home() {
     const [movie, setMovie] = useState()
@@ -54,8 +55,7 @@ function Home() {
             const { data: { results }
             } = await api.get('/person/popular')
 
-           
-            setTopPeople(results)
+       setTopPeople(results)
         }
 
         getMovies()
@@ -70,6 +70,7 @@ function Home() {
         <>
             {movie && (
                 <Background img={getImages(movie.backdrop_path)}>
+                    <Modal movieId={movie.id}/>
                     <Container>
                         <Info>
                             <h1>{movie.title}</h1>
