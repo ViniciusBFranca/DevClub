@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 10px 50px;
   align-items: center;
-  background-color: ${ props => props.changeBackground ? '#000000e2' : 'transparent'};
+  background: ${props => props.changeBackground ? '#000000e2' : 'transparent'};
   transition: background-color 0.6s ease-in-out;
 
   img {
@@ -29,9 +29,10 @@ export const Li = styled.li`
   font-size: 28px;
   position: relative;
 
+
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: ${props => props.$isActive ? 'red' : '#ffffff'};
   }
 
   &::after {
