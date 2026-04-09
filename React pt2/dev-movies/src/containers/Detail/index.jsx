@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
-import { Container, Background, Cover } from "./styles";
-import { getMovieById, getMovieCredits, getMovieSimilar, getMovieVideos } from "../../services/getData";
-import { useParams } from "react-router-dom";
-import { getImages } from "../../utils/getImages";
+import { useEffect, useState } from 'react'
+import { Container, Background, Cover, Inform } from './styles'
+import { getMovieById, getMovieCredits, getMovieSimilar, getMovieVideos } from '../../services/getData'
+import { useParams } from 'react-router-dom'
+import { getImages } from '../../utils/getImages'
+import SpanGenres from '../../components/SpanGenres'
+import Credits from '../../components/Credits'
+
 
 function Detail() {
     const {id} = useParams()
     const [movie, setMovie] = useState()
-    const [movievideos, setMovieVideos] = useState()
+    const [movieVideos, setMovieVideos] = useState()
     const [movieCredits, setMovieCredits] = useState()
     const [movieSimilar, setMovieSimilar] = useState()
 
@@ -44,9 +47,15 @@ function Detail() {
                 <Cover>
                     <img src={getImages(movie.poster_path)}  />
                 </Cover>
-                <div>Detalhe</div>
+                <Inform>
+                    <h2> {movie.title} </h2>
+                    <SpanGenres genres={movie.genres}/>
+                    <div>
+                        <Credits credits={movieCredits}/>
+                   </div>
+                </Inform>
             </Container>
-            </>
+            </> 
             )}
            </>
         )

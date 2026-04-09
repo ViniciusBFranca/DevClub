@@ -1,19 +1,18 @@
-import styled from "styled-components";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from 'styled-components'
 
-const scale = keyframes `
+const scale = keyframes`
    
    from {
      transform: scale (0)
    }
    to {
-     tranform:scale(1)
+      transform: scale(1);
    }
 `
 
 
 export const Background = styled.div`
-   background-image: url(${(props) => props.image});
+   background-image: url(${(props) => props.$image});
    height: 50vh;
    background-position: center;
    background-size: cover;
@@ -63,7 +62,30 @@ export const Cover = styled.div`
     width: 420px;
     border-radius: 30px;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-    animation: ${scale} 0.5 linear;
+    animation: ${scale} 0.5s linear;
+  }
+
+`
+
+export const Inform = styled.div`
+  padding: 20px;
+  width: 50%;
+  z-index: 99;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  p {
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
 `
