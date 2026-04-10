@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Container, Background, Cover, Inform} from './styles'
+import { Container, Background, Cover, Inform, ContainerMovies} from './styles'
 import { getMovieById, getMovieCredits, getMovieSimilar, getMovieVideos } from '../../services/getData'
 import { useParams } from 'react-router-dom'
 import { getImages } from '../../utils/getImages'
 import SpanGenres from '../../components/SpanGenres'
 import Credits from '../../components/Credits'
-import { ContainerMovies } from '../../components/ContainerMovies/styles'
+import ContainerMovies from '../../components/ContainerMovies'
 
 
 function Detail() {
@@ -57,9 +57,14 @@ function Detail() {
                 </Inform>
             </Container>
             <ContainerMovies>
-                 {movieVideos && movieVideos.map((video  (
+                 {movieVideos && movieVideos.map((video) => (
                     <div key={video.id}>
-                        <h4></h4>
+                        <h4>{video.name}</h4>
+                        <iframe src={`https://www.youtube.com/embed/${video.key}`} 
+                        title="Youtube Video Player" 
+                        height="500px" 
+                        width="100%"
+                        ></iframe>
                     </div>
                   ))}
             </ContainerMovies>

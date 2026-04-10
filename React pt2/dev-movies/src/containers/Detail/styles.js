@@ -90,5 +90,18 @@ export const Inform = styled.div`
 
 `
 export const ContainerMovies = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 
+  div {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
+  }
 `
