@@ -91,6 +91,7 @@ export const Inform = styled.div`
 `
 export const ContainerMovies = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -102,6 +103,13 @@ export const ContainerMovies = styled.div`
     max-width: 1000px;
     width: 100%;
     height: 100%;
-    margin: 50px 0;
+    margin: 20px 0;
+  }
+
+  h4 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
   }
 `
