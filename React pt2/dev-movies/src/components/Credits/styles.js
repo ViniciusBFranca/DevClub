@@ -5,11 +5,12 @@ export const Title = styled.h4`
   color: #ffffff;
   font-size: 28px;
   font-weight: 700;
+  margin-top: 15px;
 `
 
 export const Container = styled.div` 
     display: flex;
-    margin-top: 10px;
+    margin-top: 15px;
     gap: 10px;
 
     div {

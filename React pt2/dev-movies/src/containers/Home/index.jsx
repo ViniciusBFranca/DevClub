@@ -9,6 +9,7 @@ import Modal from '../../components/Modal'
 import { useNavigate } from 'react-router-dom'
 import { getMovieVideos, getMovies, getPopularSeries, getTopMovies, getTopPeople, getTopSeries } from '../../services/getData'
 
+
 function Home() {
     const [showModal, setShowModal] = useState(false)
     const [movie, setMovie] = useState()

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Container, Background, Cover, Inform } from './styles'
+import { Container, Background, Cover, Inform} from './styles'
 import { getMovieById, getMovieCredits, getMovieSimilar, getMovieVideos } from '../../services/getData'
 import { useParams } from 'react-router-dom'
 import { getImages } from '../../utils/getImages'
 import SpanGenres from '../../components/SpanGenres'
 import Credits from '../../components/Credits'
+import { ContainerMovies } from '../../components/ContainerMovies/styles'
 
 
 function Detail() {
@@ -42,7 +43,7 @@ function Detail() {
             {movie && ( 
             
             <>
-            <Background image={getImages(movie.backdrop_path)}/>
+            <Background $image={getImages(movie.backdrop_path)}/>
             <Container>
                 <Cover>
                     <img src={getImages(movie.poster_path)}  />
@@ -55,6 +56,13 @@ function Detail() {
                    </div>
                 </Inform>
             </Container>
+            <ContainerMovies>
+                 {movieVideos && movieVideos.map((video  (
+                    <div key={video.id}>
+                        <h4></h4>
+                    </div>
+                  ))}
+            </ContainerMovies>
             </> 
             )}
            </>

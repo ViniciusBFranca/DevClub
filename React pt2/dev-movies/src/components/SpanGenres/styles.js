@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SpanGenres = styled.div`
+export const Container = styled.div`
     display: flex;
     margin-top: 30px;
     gap: 10px;
