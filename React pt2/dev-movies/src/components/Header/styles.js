@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   min-height: 100px;
   z-index: 99;
-  position: fixed;
+  position: absolute;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ export const Li = styled.li`
 
   a {
     text-decoration: none;
-    color: ${props => props.$isActive ? 'red' : '#ffffff'};
+    color: ${props => props.$isActive ? '#ffffff' : '#ffffff'};
   }
 
   &::after {
